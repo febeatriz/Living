@@ -1,0 +1,111 @@
+.glide {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.glide__slides {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.glide__slide {
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.glide__images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.glide__arrows {
+    position: absolute;
+    top: 95%;
+    margin-left: 530px;
+    width: 10%;
+    display: flex;
+    transform: translateY(-50%);
+    color: white;
+    padding: 5px;
+    cursor: row-resize;
+}
+
+.glide__arrow:hover {
+    background-color: black;
+}
+
+.carrossel-container {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.titulo-carrossel {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subTitulo-carrossel {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .glide {
+        max-width: 100%;
+        max-height: 400px;
+    }
+
+    .glide__slide {
+        width: 100%;
+        /* Mostra uma imagem por vez em telas menores */
+    }
+
+    .glide__arrows {
+        margin-left: 80%;
+        /* Ajusta a posição das setas */
+    }
+
+    .titulo-carrossel {
+        font-size: 30px;
+        /* Reduz o tamanho da fonte do título */
+    }
+
+    .subTitulo-carrossel {
+        font-size: 16px;
+        /* Reduz o tamanho da fonte do subtítulo */
+    }
+}
+
+@media (max-width: 480px) {
+    .glide {
+        max-height: 300px;
+    }
+
+    .glide__arrows {
+        margin-left: 70%;
+        /* Ajusta ainda mais a posição das setas */
+    }
+
+    .titulo-carrossel {
+        font-size: 24px;
+        /* Reduz ainda mais o tamanho da fonte do título */
+    }
+
+    .subTitulo-carrossel {
+        font-size: 14px;
+        /* Reduz ainda mais o tamanho da fonte do subtítulo */
+    }
+}

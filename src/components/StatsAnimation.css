@@ -1,0 +1,81 @@
+/* Estilo do container principal */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1B2160;
+    padding: 50px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Estilo dos itens de estatística */
+.stat-item {
+    margin: 0 20px;
+}
+
+/* Contêiner dos números */
+.rolling-number {
+    font-size: 50px;
+    margin: 0;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    /* Aumentado para garantir que o número não seja cortado */
+    min-width: 120px;
+    /* Ajustado para garantir espaço suficiente */
+    text-align: center;
+    line-height: 80px;
+    /* Garantir o alinhamento vertical */
+}
+
+/* Animação dinâmica para os números */
+.rolling-number span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5) rotateX(90deg);
+    opacity: 0;
+    animation: dynamicNumber 1.5s ease-out forwards;
+}
+
+/* Keyframes para a animação dinâmica */
+@keyframes dynamicNumber {
+    0% {
+        transform: translateX(-50%) scale(0.5) rotateX(90deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.2) rotateX(-10deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+/* Estilo dos textos */
+.stat-item p {
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: #ddd;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Keyframes para a animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

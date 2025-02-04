@@ -1,0 +1,184 @@
+/* Estilo geral para o fundo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container principal com fundo azul */
+.contact-page {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte quando necessário */
+    gap: 200px;
+    /* Adiciona espaçamento entre os itens */
+}
+
+/* Estilo do formulário */
+.form-container {
+    background: #1B2160;
+    /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Estilo da barra lateral com os cards */
+.info-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 400px;
+}
+
+/* Estilo dos cards */
+.info-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.397);
+    padding: 20px;
+}
+
+.info-card h2 {
+    color: #1B2160;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+/* Estilo do parágrafo dentro do card */
+.info-card p {
+    color: #1B2160;
+    line-height: 1.6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Labels */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: #1B2160;
+    padding: 2px 4px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #1B2160;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1B2160;
+    box-shadow: 0 0 3px #1B2160;
+}
+
+/* Botão */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1B2160;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1B2160;
+}
+
+/* Mensagens de erro */
+small {
+    color: red;
+    font-size: 12px;
+}
+
+/* Espaçamento entre campos */
+div {
+    margin-bottom: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    /* A partir de 768px (tablets), empilha o formulário e os cards */
+    .contact-page {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .form-container {
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .info-sidebar {
+        margin-left: 0;
+    }
+
+    .info-card h2 {
+        font-size: 60px;
+        /* Reduzir o tamanho do título no card */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Para telas menores que 480px (smartphones) */
+    .info-sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .info-card h2 {
+        font-size: 40px;
+        /* Reduzir ainda mais o tamanho do título */
+    }
+
+    .form-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        /* Reduzir o tamanho do botão em telas menores */
+    }
+}

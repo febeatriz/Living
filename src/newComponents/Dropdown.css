@@ -1,0 +1,99 @@
+/* Estilos gerais da página */
+.dropdown-page {
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Container do dropdown */
+.dropdown-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrapper do dropdown */
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    /* Largura do dropdown */
+}
+
+/* Estilo do dropdown */
+.dropdown {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    /* Aumentei o padding */
+    font-size: 18px;
+    /* Aumentei a fonte */
+    font-family: 'Montserrat', Arial, sans-serif;
+    border: 2px solid #1B2160;
+    border-radius: 5px;
+    background-color: #1B2160;
+    /* Fundo azul */
+    color: white;
+    /* Texto branco */
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    /* Remove o estilo padrão do dropdown */
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover {
+    background-color: #0e1130;
+    /* Tom mais escuro ao passar o mouse */
+    border-color: #0e1130;
+}
+
+.dropdown:focus {
+    border-color: #0e1130;
+    box-shadow: 0 0 5px rgba(27, 33, 96, 0.5);
+}
+
+/* Ícone do dropdown */
+.dropdown-icon {
+    position: absolute;
+    right: 15px;
+    /* Ajustei a posição */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Impede que o ícone bloqueie o clique */
+    color: white;
+    /* Ícone branco */
+    font-size: 20px;
+    /* Aumentei o tamanho do ícone */
+}
+
+/* Estilo das opções do dropdown */
+.dropdown option {
+    padding: 10px;
+    background-color: #1B2160;
+    /* Fundo azul */
+    color: white;
+    /* Texto branco */
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.dropdown option:hover {
+    background-color: #0e1130;
+    /* Tom mais escuro ao passar o mouse */
+}
+
+.dropdown option:checked {
+    background-color: #0e1130;
+    /* Tom mais escuro para a opção selecionada */
+}
+
+/* Estilo das seções */
+.section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: -150px;
+}

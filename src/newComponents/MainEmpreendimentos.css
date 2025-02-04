@@ -1,0 +1,68 @@
+/* Estilo para a página mainEmpreendimentos */
+.main-empreendimentos {
+    position: relative;
+    height: 90vh;
+    /* Reduz a altura da tela para 80% da altura da janela */
+    overflow: hidden;
+}
+/* import './Dropdown.css' */
+.background-image {
+    background-image: url('./../../public/images/empreendimento.png');
+    /* Substitua com o link da sua imagem */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+/* Camada escura sobre a imagem */
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Escurece a imagem com uma sobreposição preta */
+    z-index: 1;
+}
+
+.text-container {
+    color: white;
+    text-align: left;
+    margin-left:50px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+    /* Garante que o texto fique acima da camada escura */
+}
+
+.text-container h1 {
+    font-size: 40px;
+    /* Tamanho reduzido da fonte */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 20px;
+    /* Tamanho ajustado */
+    font-weight: normal;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .text-container h1 {
+        font-size: 28px;
+        /* Reduz o tamanho do texto em telas menores */
+    }
+
+    .text-container p {
+        font-size: 16px;
+        /* Reduz o tamanho do parágrafo em telas menores */
+    }
+}

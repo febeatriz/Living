@@ -1,0 +1,184 @@
+/* Estilos gerais dos cards */
+.cards {
+    padding: 20px;
+    background-color: white;
+}
+
+.cards h1 {
+    font-size: 32px;
+    color: #1B2160;
+    margin-bottom: 20px;
+}
+
+.cards__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards__wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: -10px;
+}
+
+.cards__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+/* Layout para "Em Obra" (card maior) */
+.cards__wrapper.small .cards__items li {
+    flex: 1 1 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    background-color: #1B2160;
+}
+
+/* Layout para "Lançamento" e "Pronto para Morar" (2 cards por linha) */
+.cards__wrapper.two-per-row .cards__items li {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 10px);
+    margin: 10px;
+    background-color: #1B2160;
+}
+
+/* Layout padrão (3 cards por linha) */
+.cards__wrapper.default .cards__items li {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #1B2160;
+}
+
+/* Estilo de cada card */
+.card-item {
+    background-color: white;
+    border: 1px solid #dddddd22;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Textos dentro do card */
+.cards__item__info,
+.cards__item__info h5,
+.card__button {
+    color: white;
+}
+
+/* Botão "Mais Opções" */
+.load-more-button {
+    padding: 10px 20px;
+    width: 300px;
+    font-size: 18px;
+    background-color: #1B2160;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover {
+    background-color: #0e1130;
+}
+
+.card__button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card__button {
+    display: block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #1B2160;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 0px;
+    text-decoration: none;
+    width: 60%;
+    margin-top: 2px;
+}
+
+.card__button:hover {
+    background-color: #ffffff91;
+}
+
+.cards__item__info h5 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.cards__item__info {
+    font-size: 18px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+
+    /* Ajusta o layout padrão para 2 cards por linha em telas menores */
+    .cards__wrapper.default .cards__items li {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Ajusta o layout para 1 card por linha em tablets e dispositivos móveis */
+    .cards__wrapper.default .cards__items li,
+    .cards__wrapper.two-per-row .cards__items li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Ajusta o tamanho do botão "Mais Opções" */
+    .load-more-button {
+        width: 100%;
+    }
+
+    /* Ajusta o tamanho do título dos cards */
+    .cards h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ajustes para dispositivos móveis pequenos */
+    .cards h1 {
+        font-size: 24px;
+    }
+
+    .cards__item__info h5 {
+        font-size: 20px;
+    }
+
+    .cards__item__info {
+        font-size: 16px;
+    }
+
+    .card__button {
+        width: 80%;
+        /* Botão ocupa mais espaço */
+    }
+}
